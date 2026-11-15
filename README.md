@@ -32,14 +32,12 @@ Open the Vite URL shown in the terminal. The development proxy sends `/api` requ
 
 ## Deploy from Git to Vercel
 
-This repository is deployed as **two Vercel projects** connected to the same Git repository. The frontend is static; FastAPI runs as a Python Function. Vercel's Python app entrypoint is configured in `backend/pyproject.toml`.
+The root `vercel.json` configures the active frontend and FastAPI backend as two Vercel Services in one project. `/api/*` is routed to FastAPI and all other paths to the Vite app. The older `mexico_agroclimatico_starter/` prototype is not part of this deployment.
 
 1. Push this project to a Git provider supported by Vercel. Large daily NASA extracts, local build output, dependency folders, and secrets are excluded by `.gitignore`.
-2. In Vercel, import the repository as a frontend project and set **Root Directory** to `frontend`. Keep the Vite defaults: install `npm install` (or `npm ci`), build `npm run build`, output `dist`.
-3. Deploy the frontend once to obtain its Vercel URL.
-4. Import the same repository again as a backend project and set **Root Directory** to `backend`. Vercel reads `requirements.txt` and the FastAPI entrypoint automatically.
-5. In the backend project's Production and Preview environment variables, set `CORS_ORIGINS` to the frontend origin(s), comma-separated. For preview URLs, optionally set `CORS_ORIGIN_REGEX` to a project-specific Vercel preview-domain pattern.
-6. Deploy the backend and copy its URL. Set `VITE_API_URL` to that backend URL in the frontend project's Production and Preview environments, then redeploy the frontend so Vite includes it in the build.
+2. Import the repository in Vercel with the repository root as the project root. Set the project framework to **Services** if Vercel does not select it automatically.
+3. Deploy. Both services share one domain, so the frontend can call `/api/...` without setting `VITE_API_URL`.
+4. If using a custom domain or separate preview setup, configure `CORS_ORIGINS` on the backend as needed.
 
 Environment variable templates are in `frontend/.env.example` and `backend/.env.example`. Never commit `.env.local`, tokens, or credentials.
 
