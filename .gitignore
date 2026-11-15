@@ -1,0 +1,24 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Build and local tooling
+frontend/node_modules/
+frontend/dist/
+.vercel/
+.vscode/
+.idea/
+*.log
+Thumbs.db
+.DS_Store
+
+# Large NASA source extracts are not needed by the deployed app.
+# The compact monthly series used by the API is kept in backend/data/.
+frontend/src/data/nasa_datos/nasa_diario_por_estado.csv
+frontend/src/data/nasa_datos/nasa_diario_por_estado_2023_2024.csv
+frontend/src/data/nasa_datos/mexico.geojson

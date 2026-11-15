@@ -1,0 +1,27 @@
+﻿variable,descripcion,unidad,observaciones
+ID_PERFIL,Identificador único del perfil de suelo.,Por verificar,
+latitud,Coordenada geográfica de latitud.,Por verificar,
+longitud,Coordenada geográfica de longitud.,Por verificar,
+FECHA,Fecha original del registro.,Por verificar,Puede existir una fecha inválida; se conserva el perfil.
+fecha_iso,Fecha normalizada en formato ISO.,Por verificar,
+GPO_SUELO,Grupo de suelo registrado por INEGI.,Por verificar,
+CLAVE_WRB,Clave de clasificación del suelo.,Por verificar,
+HORIZONTE,Horizonte del perfil de suelo.,Por verificar,
+PH,Valor de pH.,Por verificar,No se ha verificado la unidad o escala de origen.
+CO,Variable de carbono orgánico.,Por verificar,No se ha verificado la unidad de origen.
+CIC,Capacidad de intercambio catiónico.,Por verificar,No se ha verificado la unidad de origen.
+CE,Conductividad eléctrica.,Por verificar,No se ha verificado la unidad de origen.
+K,Variable de potasio.,Por verificar,
+CA,Variable de calcio.,Por verificar,
+MG,Variable de magnesio.,Por verificar,
+NA,Variable de sodio.,Por verificar,
+SB,Suma de bases.,Por verificar,No se ha verificado la unidad de origen.
+SNA,Variable de sodio intercambiable.,Por verificar,No se ha verificado la unidad de origen.
+CACO3,Variable de carbonato de calcio.,Por verificar,No se ha verificado la unidad de origen.
+CASO4,Variable de sulfato de calcio.,Por verificar,No se ha verificado la unidad de origen.
+PRECIP,Precipitación registrada.,Por verificar,No se ha verificado la unidad de origen.
+TEMP,Temperatura registrada.,Por verificar,No se ha verificado la unidad de origen.
+ALTITUD,Altitud del perfil.,Por verificar,No se ha verificado la unidad de origen.
+PENDIENTE,Pendiente del terreno.,Por verificar,No se ha verificado la unidad de origen.
+cluster,Grupo asignado mediante K-Means exploratorio.,Por verificar,"Agrupamiento exploratorio, no clasificación oficial."
+grupo_quimico,Etiqueta descriptiva del grupo químico.,Por verificar,

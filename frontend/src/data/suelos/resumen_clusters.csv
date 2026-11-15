@@ -1,0 +1,4 @@
+﻿cluster,grupo_quimico,cantidad_perfiles,porcentaje,mediana_PH,mediana_CO,mediana_CIC,mediana_CE,mediana_K,mediana_CA,mediana_MG,mediana_NA,mediana_SB,mediana_SNA,mediana_CACO3,mediana_CASO4
+0,Perfil químico A,7986,55.65,6.9,0.4,14.5,0.1,0.4,7.2,2.0,0.3,86.5,2.0,0.0,0.0
+1,Perfil químico B,6122,42.66,8.2,0.6,29.9,0.3,0.7,33.2,3.7,0.6,100.0,2.1,0.0,0.0
+2,Perfil químico C,242,1.69,8.2,0.4,24.35,25.1,1.3,18.9,7.7,24.0,100.0,92.55,0.0,0.0

@@ -1,0 +1,530 @@
+
+.map-page {
+  padding: 30px 35px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.map-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.map-eyebrow {
+  color: #398b62;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.map-heading h1 {
+  color: #203a2d;
+  font: 800 27px/1.15 Manrope, sans-serif;
+  letter-spacing: -0.55px;
+  margin: 6px 0 5px;
+}
+
+.map-heading .map-subtitle {
+  color: #718177;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.map-indicator-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: -8px 0 14px;
+  padding: 11px 14px;
+  border: 1px solid #dce9df;
+  border-radius: 10px;
+  background: linear-gradient(100deg, #f1f8ee 0%, #f8fbf5 100%);
+}
+
+.map-indicator-strip.temperature-active {
+  border-color: #d8e8ee;
+  background: linear-gradient(100deg, #eff7fa 0%, #f6faf7 65%, #fffbed 100%);
+}
+
+.map-indicator-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border-radius: 9px;
+  color: #26764e;
+  background: #e0f0df;
+}
+
+.temperature-active .map-indicator-icon { color: #277c9f; background: #dceef3; }
+.map-indicator-copy { min-width: 0; }
+.map-indicator-copy strong { display: block; color: #304d3c; font-size: 12px; }
+.map-indicator-copy small { display: block; margin-top: 3px; color: #75847a; font-size: 10px; }
+.map-indicator-value { margin-left: auto; color: #2f7650; font-size: 12px; font-weight: 800; text-align: right; }
+.temperature-active .map-indicator-value { color: #267a98; }
+
+.map-heading h1 {
+  color: #233c30;
+  font-size: 27px;
+  margin: 7px 0;
+}
+
+.map-heading p {
+  color: #849088;
+  font-size: 13px;
+}
+
+.map-source {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2c7654;
+  background: #eaf3ed;
+  padding: 11px 16px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.map-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: white;
+  border: 1px solid #e9eee9;
+  border-radius: 11px 11px 0 0;
+  padding: 15px 20px;
+}
+
+.map-toolbar-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #355b44;
+  font-weight: 700;
+  font-size: 12px;
+  padding-right: 15px;
+  border-right: 1px solid #e5ebe6;
+}
+
+.layer-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64746a;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.layer-option input {
+  accent-color: #2c7654;
+  width: 15px;
+  height: 15px;
+}
+
+.map-imagery-picker select {
+  max-width: 265px;
+  height: 34px;
+  padding: 0 9px;
+  border: 1px solid #d8e7e3;
+  border-radius: 7px;
+  background: #f9fcfa;
+  color: #31574a;
+  font: inherit;
+}
+
+.grid-resolution {
+  margin-left: auto;
+  padding: 7px 11px;
+  border-radius: 6px;
+  background: #eaf3ed;
+  color: #2c7654;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.map-wrapper {
+  height: 510px;
+  position: relative;
+  border: 1px solid #e9eee9;
+  border-top: none;
+  overflow: hidden;
+}
+
+.national-map {
+  height: 100%;
+  width: 100%;
+  background: #e5ebe7;
+  z-index: 1;
+}
+
+.map-overlay-info {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: white;
+  padding: 10px 13px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #00000015;
+  color: #355b44;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.map-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.8fr);
+  gap: 12px;
+  background: white;
+  border: 1px solid #e9eee9;
+  border-top: none;
+  border-radius: 0 0 11px 11px;
+  padding: 17px 20px;
+}
+
+.map-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px 13px;
+  background: #f4f7f4;
+  border-radius: 8px;
+  color: #718077;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.map-notice svg {
+  flex-shrink: 0;
+  color: #438765;
+}
+
+.map-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
+.soil-moisture-picker select {
+  height: 34px;
+  padding: 0 9px;
+  border: 1px solid #d8e7e3;
+  border-radius: 7px;
+  background: #f9fcfa;
+  color: #31574a;
+  font: inherit;
+}
+
+.data-layer-picker select {
+  height: 34px;
+  max-width: 260px;
+  padding: 0 9px;
+  border: 1px solid #cbded7;
+  border-radius: 7px;
+  background: #f4faf7;
+  color: #245b46;
+  font: inherit;
+  font-weight: 600;
+}
+
+.soil-moisture-legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 13px;
+  border: 1px solid #e8eee9;
+  border-radius: 8px;
+  color: #52695a;
+  font-size: 10px;
+}
+
+.soil-moisture-legend strong,
+.soil-moisture-legend small { display: block; }
+.soil-moisture-legend strong { color: #355b44; font-size: 11px; }
+.soil-moisture-legend small { color: #7d8b81; font-size: 9px; line-height: 1.45; }
+.moisture-gradient { height: 12px; border-radius: 20px; background: linear-gradient(90deg, #ff9a00, #fff000 35%, #39d000 62%, #00a3ff); }
+.moisture-labels { display: flex; justify-content: space-between; color: #718077; font-size: 9px; }
+.temperature-scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; height: 12px; overflow: hidden; border-radius: 20px; }
+.temperature-scale span { display: block; }
+.temperature-labels { display: flex; justify-content: space-between; gap: 6px; color: #718077; font-size: 8px; }
+.temperature-error { color: #a54535 !important; }
+.temperature-error-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.temperature-error-row button { flex: none; border: 1px solid #e7c6bd; border-radius: 6px; padding: 4px 8px; background: #fff8f5; color: #9c4d3c; font-size: 9px; font-weight: 700; }
+
+.state-map-legend {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 13px;
+  border: 1px solid #dfe9e2;
+  border-radius: 9px;
+  background: #fbfdfb;
+}
+.legend-heading strong,.legend-heading small { display: block; }
+.legend-heading strong { color: #355b44; font-size: 11px; }
+.legend-heading small,.legend-footnote { color: #7d8b81; font-size: 9px; line-height: 1.45; }
+.state-legend-swatches,.state-legend-labels { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 4px; }
+.state-legend-swatches span { height: 11px; border-radius: 3px; }
+.state-legend-labels span { color: #718077; font-size: 8px; text-align: center; }
+.soil-map-legend { min-height: 86px; }
+.soil-map-legend strong { color: #355b44; font-size: 11px; }
+.soil-map-legend small { color: #7d8b81; font-size: 9px; line-height: 1.45; }
+.soil-quality-legend { min-height: 0; }
+.soil-cluster-key { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 2px 0; }
+.soil-cluster-key > span { display: flex; align-items: flex-start; gap: 6px; min-width: 0; color: #52695a; font-size: 10px; }
+.soil-cluster-key i { width: 10px; height: 10px; flex: none; border-radius: 50%; }
+.soil-cluster-key > span > span { display: grid; gap: 3px; min-width: 0; }
+.soil-cluster-key b { color: #355b44; font-size: 10px; line-height: 1.35; }
+.soil-cluster-key small { color: #7d8b81; font-size: 9px; line-height: 1.35; }
+.soil-cluster-key strong { margin-left: auto; color: #355b44; font-size: 10px; }
+.soil-profile-tooltip { border: 1px solid #dce9df !important; border-radius: 8px !important; color: #294838 !important; font: 11px/1.55 'DM Sans', sans-serif !important; }
+.map-loading { position: absolute; z-index: 600; top: 15px; right: 15px; display: flex; align-items: center; gap: 8px; padding: 9px 12px; border: 1px solid #dce9df; border-radius: 8px; background: #ffffffed; color: #37684b; font-size: 10px; font-weight: 700; box-shadow: 0 2px 10px #00000012; }
+.map-spinner { width: 14px; height: 14px; border: 2px solid #c9dfcf; border-top-color: #32825a; border-radius: 50%; animation: map-spin .8s linear infinite; }
+@keyframes map-spin { to { transform: rotate(360deg); } }
+.map-error { display: flex; grid-column: 1 / -1; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 12px; border: 1px solid #edc9bd; border-radius: 8px; background: #fff6f2; color: #994b3b; font-size: 10px; }
+.map-error button { flex: none; border: 1px solid #e6bfb4; border-radius: 6px; padding: 5px 9px; background: #fff; color: #8f4536; font-size: 9px; font-weight: 700; }
+
+:root[data-theme="dark"] .map-indicator-strip { background: linear-gradient(100deg, #1e382f, #21363a); border-color: #3a6251; }
+:root[data-theme="dark"] .map-indicator-strip.temperature-active { background: linear-gradient(100deg, #203740, #23392f 70%, #403923); border-color: #3f6265; }
+:root[data-theme="dark"] .map-indicator-copy strong { color: #e1eee6; }
+:root[data-theme="dark"] .map-indicator-copy small { color: #b6c8be; }
+:root[data-theme="dark"] .map-indicator-value { color: #a9e1bd; }
+:root[data-theme="dark"] .temperature-active .map-indicator-value { color: #a9dce9; }
+:root[data-theme="dark"] .map-indicator-icon { background: #28503e; color: #b9e8c8; }
+:root[data-theme="dark"] .temperature-active .map-indicator-icon { background: #294753; color: #b6e4f0; }
+:root[data-theme="dark"] .soil-moisture-legend { background: #1b3034; border-color: #344d4d; }
+:root[data-theme="dark"] .soil-moisture-legend strong { color: #e0eee6; }
+:root[data-theme="dark"] .soil-moisture-legend small,
+:root[data-theme="dark"] .moisture-labels,
+:root[data-theme="dark"] .temperature-labels { color: #bdcdc5; }
+:root[data-theme="dark"] .data-layer-picker select,
+:root[data-theme="dark"] .soil-moisture-picker select,
+:root[data-theme="dark"] .map-imagery-picker select { background: #16272b; border-color: #40585a; color: #e4f0e9; }
+:root[data-theme="dark"] .state-map-legend { background: #1b3034; border-color: #344d4d; }
+:root[data-theme="dark"] .state-map-legend strong { color: #e0eee6; }
+:root[data-theme="dark"] .state-map-legend small,:root[data-theme="dark"] .state-legend-labels span { color: #bdcdc5; }
+:root[data-theme="dark"] .map-loading { background: #1b3034ed; border-color: #3a6251; color: #c5ead4; }
+:root[data-theme="dark"] .map-error { background: #402d2a; border-color: #744a43; color: #f1c9bf; }
+
+.map-selection div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.map-selection span {
+  font-size: 11px;
+  color: #89968e;
+}
+
+.map-selection strong {
+  color: #355b44;
+  font-size: 13px;
+}
+
+.cell-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 190px;
+  color: #355b44;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+}
+
+.cell-popup p {
+  margin: 0;
+}
+
+.cell-popup span {
+  color: #77857c;
+}
+
+.cell-popup hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e5ebe6;
+}
+
+@media (max-width: 850px) {
+  .map-page {
+    padding: 22px 16px;
+  }
+
+  .map-toolbar {
+    gap: 13px;
+  }
+
+  .map-toolbar-title {
+    width: 100%;
+    border-right: none;
+  }
+
+  .map-wrapper {
+    height: 430px;
+  }
+}
+
+@media (max-width: 550px) {
+  .map-heading {
+    align-items: flex-start;
+  }
+
+  .map-source {
+    padding: 9px;
+    font-size: 0;
+  }
+
+  .map-selection {
+    grid-template-columns: 1fr;
+  }
+
+  .map-bottom { grid-template-columns: 1fr; }
+  .map-selection { grid-column: auto; }
+
+  .map-wrapper {
+    height: 380px;
+  }
+
+  .map-imagery-picker {
+    width: 100%;
+  }
+
+  .map-imagery-picker select {
+    flex: 1;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .data-layer-picker { width: 100%; }
+  .data-layer-picker select { flex: 1; max-width: none; min-width: 0; }
+  .temperature-labels { font-size: 7px; }
+  .map-indicator-strip { align-items: flex-start; flex-wrap: wrap; }
+  .map-indicator-copy { flex: 1; }
+  .map-indicator-value { width: 100%; margin-left: 48px; text-align: left; }
+}
+
+/* Put the selected state's readings in a compact overlay on the map. */
+.map-page .map-overlay-info {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  width: min(280px, calc(100% - 30px));
+  min-width: 0;
+  height: fit-content;
+  max-height: max-content;
+  padding: 12px;
+  border: 1px solid #dce9df;
+  border-radius: 9px;
+  background: #ffffffed;
+  backdrop-filter: blur(6px);
+}
+
+.map-page .map-state-card-soil { width: min(238px, calc(100% - 30px)); gap: 7px; padding: 10px; }
+.map-page .map-state-card-soil .map-state-reading strong { font-size: 18px; }
+.map-page .map-state-card-soil .map-state-card-meta { padding-top: 6px; }
+
+.map-state-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #247b82;
+}
+
+.map-state-card-heading strong {
+  color: #245b46;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.map-state-reading { display: grid; gap: 3px; }
+.map-state-reading span,.map-state-card-meta span { color: #79877e; font-size: 10px; line-height: 1.35; }
+.map-state-reading strong { color: #176f88; font-size: 22px; line-height: 1.15; font-weight: 800; }
+.map-state-card-meta { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,.7fr); gap: 8px; padding-top: 8px; border-top: 1px solid #e4ebe5; }
+.map-state-card-meta > div { display: grid; align-content: start; gap: 3px; min-width: 0; }
+.map-state-card-meta strong { color: #315743; font-size: 10px; line-height: 1.35; overflow-wrap: anywhere; }
+
+.map-page .map-bottom {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 10px;
+  padding: 12px 15px;
+}
+
+.map-page .map-notice {
+  padding: 8px 11px;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.map-page .map-source-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+:root[data-theme="dark"] .map-page .map-overlay-info {
+  background: #17292bed;
+  border-color: #344d4d;
+}
+
+:root[data-theme="dark"] .map-page .map-state-card-heading strong,
+:root[data-theme="dark"] .map-page .map-state-card-meta strong {
+  color: #d0e0d8;
+}
+
+:root[data-theme="dark"] .map-page .map-state-reading strong {
+  color: #a9dce9;
+}
+
+:root[data-theme="dark"] .map-page .map-state-reading span,
+:root[data-theme="dark"] .map-page .map-state-card-meta span {
+  color: #bdcdc5;
+}
+
+:root[data-theme="dark"] .map-page .map-state-card-meta {
+  border-color: #344d4d;
+}
+
+:root[data-theme="dark"] .soil-cluster-key span,
+:root[data-theme="dark"] .soil-cluster-key b {
+  color: #d0e0d8;
+}
+:root[data-theme="dark"] .soil-cluster-key small { color: #bdcdc5; }
+
+:root[data-theme="dark"] .map-page .map-selection.state-selection {
+  border-color: #344d4d;
+  background: #1b3034;
+}
+
+:root[data-theme="dark"] .map-page .state-selection > div + div {
+  border-color: #344d4d;
+}
+
+@media (max-width: 1000px) {
+  .map-page .map-bottom { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 550px) {
+  .map-page .map-bottom { gap: 9px; padding: 10px; }
+  .map-page .map-overlay-info { width: min(250px, calc(100% - 24px)); padding: 10px; gap: 8px; }
+  .map-state-reading strong { font-size: 19px; }
+  .soil-cluster-key { gap: 5px; }
+  .soil-cluster-key > span { font-size: 9px; }
+  .map-page .map-state-card-soil { width: min(220px, calc(100% - 24px)); }
+}

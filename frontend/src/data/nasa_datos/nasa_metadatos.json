@@ -1,0 +1,49 @@
+{
+    "proyecto": "Datos ambientales NASA POWER - Mexico",
+    "fuente": "NASA POWER",
+    "fuentes_datos": [
+        "MERRA2",
+        "POWER",
+        "SYN1DEG"
+    ],
+    "comunidad": "AG",
+    "fecha_inicio": "20231101",
+    "fecha_fin": "20261031",
+    "estandar_temporal": "LST",
+    "variables": {
+        "T2M": {
+            "unidad": "C",
+            "descripcion": "Temperature at 2 Meters"
+        },
+        "T2M_MAX": {
+            "unidad": "C",
+            "descripcion": "Temperature at 2 Meters Maximum"
+        },
+        "T2M_MIN": {
+            "unidad": "C",
+            "descripcion": "Temperature at 2 Meters Minimum"
+        },
+        "PRECTOTCORR": {
+            "unidad": "mm/day",
+            "descripcion": "Precipitation Corrected"
+        },
+        "GWETPROF": {
+            "unidad": "1",
+            "descripcion": "Profile Soil Wetness"
+        },
+        "ALLSKY_SFC_SW_DWN": {
+            "unidad": "MJ/m^2/day",
+            "descripcion": "All Sky Surface Shortwave Downward Irradiance"
+        },
+        "RH2M": {
+            "unidad": "%",
+            "descripcion": "Relative Humidity at 2 Meters"
+        }
+    },
+    "bloques_consultados": 8,
+    "registros_guardados": 3401693,
+    "registros_relleno_omitidos": 157,
+    "puntos_evaluados_dentro_del_territorio": 3639,
+    "puntos_resumen_geojson": 3537,
+    "nota": "Las variables pueden tener diferentes resoluciones espaciales. Los datos son estimaciones ambientales de NASA POWER, no mediciones directas de laboratorio."
+}
