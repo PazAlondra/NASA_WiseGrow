@@ -4,7 +4,10 @@
     "backend": {
       "root": "backend",
       "framework": "fastapi",
-      "entrypoint": "main:app"
+      "entrypoint": "main:app",
+      "maxDuration": 300,
+      "memory": 2048,
+      "includeFiles": ["data/**"]
     },
     "frontend": {
       "root": "frontend",
@@ -12,6 +15,10 @@
     }
   },
   "rewrites": [
+    {
+      "source": "/api",
+      "destination": { "service": "backend" }
+    },
     {
       "source": "/api/(.*)",
       "destination": { "service": "backend" }
